@@ -1,0 +1,51 @@
+package com.hcl.ems;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class EmployDao {
+	
+	public Employ searchEmployDetails(int empId){
+		Connection con=DaoConnection.getConnection();
+		String cmd="select * from employee where  EMP_ID=?";
+		Employ obj=null;
+		try {
+			PreparedStatement pst=con.prepareStatement(cmd);
+			pst.setInt(1, empId);
+			ResultSet rs=pst.executeQuery();
+			if(rs.next()){
+				obj=new Employ();
+				obj.setEmpId(rs.getInt("EMP_ID"));
+				obj.setEmpName(rs.getString("EMP_NAME"));
+				obj.setEmail(rs.getString("EMP_EMAIL"));
+				obj.setMobileNo(rs.getString("EMP_MOB_NO"));
+				obj.setDeptName(rs.getString("EMP_DPT_NAME"));
+				obj.setDateOfJoin(rs.getString("EMP_DATE_JOINED"));
+				obj.setMgrId(rs.getString("EMP_MGR_ID"));
+				obj.setLeaveBal(rs.getInt("EMP_LEAVE_BALANCE"));
+			/*	String mgrId=obj.getMgrId();
+				if(mgrId != null){
+					cmd="select * from employee where EMP_MGR_ID=?";
+					pst.setString(1, mgrId);
+					 rs=pst.executeQuery();
+					 if(rs.next()){
+							obj.setEmpId(rs.getInt("EMP_ID"));
+							obj.setEmpName(rs.getString("EMP_NAME"));
+							obj.setEmail(rs.getString("EMP_EMAIL"));
+							obj.setMobileNo(rs.getString("EMP_MOB_NO"));
+					 }
+					
+					
+				}*/
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return obj;
+	}
+
+}

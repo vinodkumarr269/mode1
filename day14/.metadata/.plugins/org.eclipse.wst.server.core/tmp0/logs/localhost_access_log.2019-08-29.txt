@@ -1,0 +1,16 @@
+127.0.0.1 - - [29/Aug/2019:17:27:10 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:27:11 +0530] "GET /EMS/MyLeave.html HTTP/1.1" 200 854
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:27:13 +0530] "GET /EMS/ApplyLeave.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:27:44 +0530] "GET /EMS/LeaveServlet?leaveStartDate=1-02-2019&leaveEndDate=2-02-2019&noOfDays=2&leaveType=vv&leaveReason=cdc HTTP/1.1" 500 1819
+127.0.0.1 - - [29/Aug/2019:17:47:43 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:48:12 +0530] "GET /EMS/LeaveServlet?leaveStartDate=01-03-2019&leaveEndDate=02-03-2019&noOfDays=2&leaveType=xc&leaveReason=fs HTTP/1.1" 500 1600
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:49:24 +0530] "GET /EMS/LeaveServlet?leaveStartDate=01-03-2019&leaveEndDate=02-03-2019&noOfDays=2&leaveType=xc&leaveReason=fs HTTP/1.1" 500 1600
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:49:24 +0530] "GET /EMS/LeaveServlet?leaveStartDate=01-03-2019&leaveEndDate=02-03-2019&noOfDays=2&leaveType=xc&leaveReason=fs HTTP/1.1" 500 1600
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:49:24 +0530] "GET /EMS/LeaveServlet?leaveStartDate=01-03-2019&leaveEndDate=02-03-2019&noOfDays=2&leaveType=xc&leaveReason=fs HTTP/1.1" 500 1600
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:49:24 +0530] "GET /EMS/LeaveServlet?leaveStartDate=01-03-2019&leaveEndDate=02-03-2019&noOfDays=2&leaveType=xc&leaveReason=fs HTTP/1.1" 500 1600
+127.0.0.1 - - [29/Aug/2019:17:50:18 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:50:42 +0530] "GET /EMS/LeaveServlet?leaveStartDate=01-02-2019&leaveEndDate=02-02-2019&noOfDays=2&leaveType=cvxc&leaveReason=xcvx HTTP/1.1" 500 1724
+127.0.0.1 - - [29/Aug/2019:17:51:57 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:51:58 +0530] "GET /EMS/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:52:06 +0530] "POST /EMS/Login HTTP/1.1" 200 533
+0:0:0:0:0:0:0:1 - - [29/Aug/2019:17:52:42 +0530] "GET /EMS/LeaveServlet?leaveStartDate=21-03-2019&leaveEndDate=22-03-2019&noOfDays=2&leaveType=fdf&leaveReason=gdfgf HTTP/1.1" 500 1600

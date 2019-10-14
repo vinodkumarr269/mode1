@@ -1,0 +1,23 @@
+package com.hcl.ass;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+
+public class StudentRead {
+	public static void main(String[] args) {
+		try {
+			FileInputStream fin=
+					new FileInputStream("c:/files/student.txt");
+			ObjectInputStream objin=new ObjectInputStream(fin);
+			Student
+		
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

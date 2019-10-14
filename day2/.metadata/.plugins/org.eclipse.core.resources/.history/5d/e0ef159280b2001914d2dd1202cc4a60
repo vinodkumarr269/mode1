@@ -1,0 +1,12 @@
+package boxing;
+
+public class BoxTest {
+	public void show(Object ob){
+		
+	}
+	public static void main(String[] args) {
+		int a=12;
+		double b=12;
+		String name="HCL";
+	}
+}

@@ -1,0 +1,13 @@
+package com.hcl.Quiz;
+enum Test{
+	A,B,C,D,E;
+	private Test(){
+		System.out.println("hi");
+	}
+
+}
+public class P13 {
+	public static void main(String[] args) {
+	}
+
+}

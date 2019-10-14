@@ -1,0 +1,6 @@
+/**
+ * 
+ */
+function show(){
+	nameForm.FullName.value=nameForm.FirstNameName.value+nameForm.LastName.value;
+}

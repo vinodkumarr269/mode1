@@ -1,0 +1,387 @@
+!SESSION 2019-07-31 09:24:30.714 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-07-31 09:25:34.243
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Coalesce'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2019-07-31 09:25:47.313
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Read timed out. ; version: 1.100.0.v20160217-0435
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at sun.security.ssl.InputRecord.readFully(Unknown Source)
+	at sun.security.ssl.InputRecord.read(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readRecord(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.readDataRecord(Unknown Source)
+	at sun.security.ssl.AppInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader(CPoolProxy.java:153)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-07-31 09:29:52.991
+!MESSAGE Failed to download org.eclipse.recommenders:index::zip:0.0.0
+!STACK 0
+org.eclipse.aether.resolution.ArtifactResolutionException: Could not find artifact org.eclipse.recommenders:index:zip:0.0.0-SNAPSHOT in models (http://download.eclipse.org/recommenders/models/mars/)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:444)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts(DefaultArtifactResolver.java:246)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact(DefaultArtifactResolver.java:223)
+	at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact(DefaultRepositorySystem.java:294)
+	at org.eclipse.recommenders.models.ModelRepository.resolveInternal(ModelRepository.java:192)
+	at org.eclipse.recommenders.models.ModelRepository.resolve(ModelRepository.java:174)
+	at org.eclipse.recommenders.internal.models.rcp.EclipseModelRepository.resolve(EclipseModelRepository.java:165)
+	at org.eclipse.recommenders.internal.models.rcp.DownloadModelArchiveJob.run(DownloadModelArchiveJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find artifact org.eclipse.recommenders:index:zip:0.0.0-SNAPSHOT in models (http://download.eclipse.org/recommenders/models/mars/)
+	at org.eclipse.aether.connector.basic.ArtifactTransportListener.transferFailed(ArtifactTransportListener.java:39)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run(BasicRepositoryConnector.java:355)
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:67)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector$DirectExecutor.execute(BasicRepositoryConnector.java:581)
+	at org.eclipse.aether.connector.basic.BasicRepositoryConnector.get(BasicRepositoryConnector.java:249)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.performDownloads(DefaultArtifactResolver.java:520)
+	at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve(DefaultArtifactResolver.java:421)
+	... 8 more
+
+!ENTRY org.eclipse.recommenders.models.rcp 1 0 2019-07-31 09:29:53.006
+!MESSAGE org.eclipse.recommenders:index::zip:0.0.0 could not be resolved from the model repositories. Are you offline?
+
+!ENTRY org.eclipse.equinox.p2.discovery 4 0 2019-07-31 10:10:13.737
+!MESSAGE Failed to discover all connectors.
+!SUBENTRY 1 org.eclipse.equinox.p2.discovery 4 0 2019-07-31 10:10:13.737
+!MESSAGE RemoteBundleDiscoveryStrategy failed with an error
+!STACK 1
+org.eclipse.core.runtime.CoreException: IO failure: cannot load discovery directory
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.RemoteBundleDiscoveryStrategy.performDiscovery(RemoteBundleDiscoveryStrategy.java:96)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: java.io.FileNotFoundException: http://download.eclipse.org/recommenders/discovery/2.x/directories/completion.xml
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:302)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.checkException(FileInfoReader.java:222)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:114)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:127)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:132)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:229)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.util.CacheManager.createCache(CacheManager.java:101)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.util.TransportUtil.readResource(TransportUtil.java:101)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.RemoteBundleDiscoveryStrategy.performDiscovery(RemoteBundleDiscoveryStrategy.java:81)
+	... 3 more
+!SUBENTRY 2 org.eclipse.equinox.p2.discovery 4 0 2019-07-31 10:10:13.738
+!MESSAGE IO failure: cannot load discovery directory
+!STACK 0
+java.io.FileNotFoundException: http://download.eclipse.org/recommenders/discovery/2.x/directories/completion.xml
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryStatusHelper.checkFileNotFound(RepositoryStatusHelper.java:302)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.checkException(FileInfoReader.java:222)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:114)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:127)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:132)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:229)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.util.CacheManager.createCache(CacheManager.java:101)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.util.TransportUtil.readResource(TransportUtil.java:101)
+	at org.eclipse.equinox.internal.p2.discovery.compatibility.RemoteBundleDiscoveryStrategy.performDiscovery(RemoteBundleDiscoveryStrategy.java:81)
+	at org.eclipse.equinox.internal.p2.discovery.Catalog.performDiscovery(Catalog.java:85)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$6.run(CatalogViewer.java:569)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2019-07-31 10:22:26.816
+!MESSAGE Full project indexing required:
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\charsets.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\access-bridge-64.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\cldrdata.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\dnsns.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\jaccess.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\jfxrt.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\localedata.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\nashorn.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\sunec.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\sunjce_provider.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\sunmscapi.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\sunpkcs11.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\ext\zipfs.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\jce.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\jfr.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\jsse.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\resources.jar
+  [+] C:\Program Files\Java\jre1.8.0_221\lib\rt.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:167)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.jface 4 2 2019-07-31 14:41:53.033
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.ArrayIndexOutOfBoundsException: 0
+	at org.eclipse.debug.internal.ui.preferences.RunDebugPropertiesPage.handleEdit(RunDebugPropertiesPage.java:422)
+	at org.eclipse.debug.internal.ui.preferences.RunDebugPropertiesPage.access$2(RunDebugPropertiesPage.java:421)
+	at org.eclipse.debug.internal.ui.preferences.RunDebugPropertiesPage$6.doubleClick(RunDebugPropertiesPage.java:208)
+	at org.eclipse.jface.viewers.StructuredViewer$1.run(StructuredViewer.java:832)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:173)
+	at org.eclipse.jface.viewers.StructuredViewer.fireDoubleClick(StructuredViewer.java:829)
+	at org.eclipse.jface.viewers.StructuredViewer.handleDoubleSelect(StructuredViewer.java:1150)
+	at org.eclipse.jface.viewers.StructuredViewer$4.widgetDefaultSelected(StructuredViewer.java:1263)
+	at org.eclipse.jface.util.OpenStrategy.fireDefaultSelectionEvent(OpenStrategy.java:252)
+	at org.eclipse.jface.util.OpenStrategy.access$0(OpenStrategy.java:249)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:311)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
+	at org.eclipse.jface.window.Window.open(Window.java:803)
+	at org.eclipse.ui.dialogs.PropertyDialogAction.run(PropertyDialogAction.java:157)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.debug.ui 4 120 2019-07-31 15:20:05.375
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException: Input Stream Closed
+	at org.eclipse.ui.console.IOConsoleInputStream.available(IOConsoleInputStream.java:267)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:94)
+	at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:119)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:733)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jdt.core 4 4 2019-07-31 17:45:52.794
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+package com.hcl.Quiz;
+public class Roman
+{
+public static void main(String[] args)
+{
+
+String u[] =new String[]{"","I","II","III","IV","V","VI","VII","VIII","IX"};
+String t[] =new String[]{" ","X","XX","XXX","LX","L","LX","LXX","LXXX","XC"};
+int i, a, b, c, d,f,g;
+i=14;
+if(i>=100)
+System.out.println("too much for me\n");
+else if(i>=11&&i<=19){
+	 f=(i%10);
+	 g=(i/10);
+	System.out.println([]+u[f]);
+}
+else{
+d = i%10;
+c = (i%100)/10;
+b = (i%1000)/100;
+a = i/1000;
+
+if(a>0) System.out.print(u[a]+" thousand " );
+if(b>0) System.out.print(u[b]+" hundred and " );
+if(c>1) System.out.print(t[c]);
+
+if(d>0) System.out.print(u[d]);
+}
+}
+}
+
+
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.setTypeAnnotationsAndSourceRangeOnArray(ASTConverter.java:3420)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToArray(ASTConverter.java:3166)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertType(ASTConverter.java:3628)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1326)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1717)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1239)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2167)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1780)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1259)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2681)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2705)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2705)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1085)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2019-07-31 17:45:52.810
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.setTypeAnnotationsAndSourceRangeOnArray(ASTConverter.java:3420)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToArray(ASTConverter.java:3166)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertType(ASTConverter.java:3628)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1326)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1717)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1239)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2167)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1780)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1259)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2681)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2705)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2705)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1085)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2019-07-31 17:45:52.824
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.setTypeAnnotationsAndSourceRangeOnArray(ASTConverter.java:3420)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToArray(ASTConverter.java:3166)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertType(ASTConverter.java:3628)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1326)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1717)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1239)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2167)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1780)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1259)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2681)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1948)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2705)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1953)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2705)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1085)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1250)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)

@@ -1,0 +1,8 @@
+package com.hcl.ass;
+
+public class StudentWrite {
+	public static void main(String[] args) {
+		
+	}
+
+}

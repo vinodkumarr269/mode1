@@ -1,0 +1,3 @@
+127.0.0.1 - - [27/Aug/2019:17:07:08 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [27/Aug/2019:17:07:08 +0530] "GET /BankProjec/SearchAccount.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Aug/2019:17:07:12 +0530] "GET /BankProjec/SearchAccountServlet?accountNo=1 HTTP/1.1" 200 138

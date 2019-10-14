@@ -1,0 +1,67 @@
+package com.hcl.ems;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class EmployDao {
+	public int generateLeaveId(){
+		Connection con=DaoConnection.getConnection();
+		int leaveId=0;
+		String cmd="select case when max(LEA_ID) is null then 1 "
+				+ "else max(LEA_ID)+1 end leaveId from leave_history";
+		try {
+			 PreparedStatement pst=con.prepareStatement(cmd);
+			ResultSet rs=pst.executeQuery();
+			rs.next();
+			leaveId=rs.getInt("leaveId");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return leaveId;
+	}
+	
+	public Employ searchEmployDetails(int empId){
+		Connection con=DaoConnection.getConnection();
+		String cmd="select * from employee where  EMP_ID=?";
+		Employ obj=null;
+		try {
+			PreparedStatement pst=con.prepareStatement(cmd);
+			pst.setInt(1, empId);
+			ResultSet rs=pst.executeQuery();
+			if(rs.next()){
+				obj=new Employ();
+				obj.setEmpId(rs.getInt("EMP_ID"));
+				obj.setEmpName(rs.getString("EMP_NAME"));
+				obj.setEmail(rs.getString("EMP_EMAIL"));
+				obj.setMobileNo(rs.getString("EMP_MOB_NO"));
+				obj.setDeptName(rs.getString("EMP_DPT_NAME"));
+				obj.setDateOfJoin(rs.getString("EMP_DATE_JOINED"));
+				obj.setMgrId(rs.getInt("EMP_MGR_ID"));
+				obj.setLeaveBal(rs.getInt("EMP_LEAVE_BALANCE"));
+		
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return obj;
+	}
+      public String applyForLeave(int empId){
+    	  Connection con=DaoConnection.getConnection();
+    	  String  cmd="Insert Into LEAVE_HISTORY  values(?,?,?,?,?,?,?,?)";
+    	  try {
+			PreparedStatement pst=con.prepareStatement(cmd);
+			pst.setInt(1,);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	  
+    	  
+      }
+}

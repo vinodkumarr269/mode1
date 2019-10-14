@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+var i=0;
+questions=[
+"1.what is opps",
+"2.introduced java",
+"3.how to declare generics",
+"4.who introduced c"
+];
+function show(){
+	document.getElementById("question").innerHTML=questions[i];
+}
+function nextQuestion(){
+	i=i+1;
+	if(i<4){
+		show();
+	}
+	else{
+		alert("exam over....");
+	}
+}

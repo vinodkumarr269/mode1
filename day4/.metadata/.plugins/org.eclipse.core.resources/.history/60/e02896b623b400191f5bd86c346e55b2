@@ -1,0 +1,62 @@
+package com.hcl.exception;
+class InvalidEmailException extends Exception{
+	public InvalidEmailException(String error)
+	{
+		super(error);
+	}
+}
+class InvalidUserNameException extends Exception{
+	public InvalidUserNameException(String error)
+	{
+		super(error);
+	}
+}
+class Mail{
+	public void display(String user) throws InvalidEmailException, InvalidUserNameException{
+		boolean flag=true;
+	char[] c=user.toCharArray();
+	for(char i:c){
+		if(i =='@'){
+			flag=false;
+			
+		if(flag==true){
+		throw 
+		new InvalidEmailException("@ mandatory");
+		}
+		else{
+			System.out.println(user);
+		}
+		}
+		if(user.length()-user.indexOf('@')<12){
+			flag=false;
+			
+			
+			
+		
+		if(flag==false)
+		{
+			throw new InvalidUserNameException("1 2letter should be ther");
+			
+			
+		}
+		else{
+			System.out.println(user);
+		}
+		}
+	}
+			
+	}
+}
+
+public class Email {
+	public static void main(String[] args) {
+		try {
+			new Mail().display("vinodhsh.com")
+;
+		} catch (InvalidEmailException | InvalidUserNameException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	}
+
+}
+

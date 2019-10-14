@@ -1,0 +1,31 @@
+package com.hcl.file;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileRead {
+  /**
+   * main started.
+   * @param args from vinod.
+   */
+  public static void main(String[] args) {
+    File f1 = 
+        new File("C:/hcljava/day4/exception/"
+        + "src/com/hcl/exception/Custom.java");
+    try {
+      FileReader fr = new FileReader(f1);
+      int ch;
+      while ((ch = fr.read()) != -1) { 
+        System.out.print((char)ch);
+      }
+      fr.close();
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
+}

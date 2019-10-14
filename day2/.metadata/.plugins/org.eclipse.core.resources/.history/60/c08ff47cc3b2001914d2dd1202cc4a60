@@ -1,0 +1,15 @@
+package Practice;
+
+public class Hello {
+		public static void main(String[] args){
+			String x="Welcome to HCL";
+			int l=0;
+			for(int i=0;x !='\0';i++){
+				l++;
+			}
+			System.out.println(l);
+				
+		
+		
+	}
+}	

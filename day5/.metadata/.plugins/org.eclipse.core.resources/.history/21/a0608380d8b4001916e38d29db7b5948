@@ -1,0 +1,15 @@
+package com.hcl.ass;
+
+public class AssertDemo {
+	public void incr(){
+		int basic=30000;
+		for(int i=0;i<8;i++){
+			basic =basic+4000;
+			System.out.println(basic);
+		}
+	}
+	public static void main(String[] args) {
+		new AssertDemo().incr();
+	}
+
+}

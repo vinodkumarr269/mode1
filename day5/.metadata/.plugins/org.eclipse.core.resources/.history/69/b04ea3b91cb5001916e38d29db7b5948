@@ -1,0 +1,49 @@
+package com.hcl.collections;
+
+import java.util.ArrayList;
+import java.util.List;
+/**
+ * giving input to list.
+ * @author Coalesce vinod.
+ *
+ */
+
+public class ArrayListDemo {
+  /**
+  * main started.
+ * @param <E>
+  * @param args method started.
+  */
+  public static  void main(String[] args) {
+    List lstNames = new ArrayList();
+    lstNames.add("anubhav");
+    lstNames.add("vinod");
+    lstNames.add("prem");
+    lstNames.add("raghu");
+    lstNames.add("sai");
+    lstNames.add("kumar");
+    System.out.println("names are");
+ //for (Object object : lstNames) {
+ //System.out.println(object);
+ //}
+    System.out.println("in jdk 1.8");
+    lstNames.forEach(System.out::println);
+ //editing 
+    lstNames.set(2, "prem reddy");
+    System.out.println("list after update");
+    lstNames.forEach(System.out::println);
+    //remove
+    System.out.println("after removing");
+    lstNames.remove(1);
+    lstNames.forEach(System.out::println);
+	//removing object
+	lstNames.remove("kumar");
+	System.out.println("list after removing object");
+	lstNames.forEach(System.out::println);
+	System.out.println("for getting perticular member "+lstNames.get(3));
+	
+	
+			
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.hcl.exception;
+
+/**
+ * program for exception.
+ * @author Coalesce from vinod.
+ */
+
+
+class NumberZeroException extends Exception { 
+ 
+	public NumberZeroException(String error) { 
+    super(error);
+  }
+}  

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="LeaveServlet" >
+          <center>
+               <table border="3">
+               <tr>
+                  <th height="50px",width="100px">empId</th>
+                  <th>nnnn</th>
+                  <th colspan="2">empName</th>
+                  <th>xxxxxxxx</th>
+                  <th colspan="2">empLeaveBal</th>
+                  <th>nn</th>
+               </tr>
+               <tr>
+                  <td height="40px",width="80px">leaId</td>
+                  <td>NoOfDays</td>
+                  <td>startDate</td>
+                  <td>endDate</td>
+                  <td>leaType</td>
+                  <td>status</td>
+                   <td>reason</td>
+               </tr>
+               </table>  <br/><br/>
+                <table border="3">
+               <tr>
+                  <th height="50px",width="100px">empId</th>
+                  <th>nnnn</th>
+                  <th colspan="2">empName</th>
+                  <th>xxxxxxxx</th>
+                  <th colspan="2">empLeaveBal</th>
+                  <th>nn</th>
+               </tr>
+               <tr>
+                  <td height="40px",width="80px">leaId</td>
+                  <td>NoOfDays</td>
+                  <td>startDate</td>
+                  <td>endDate</td>
+                  <td>leaType</td>
+                  <td>status</td>
+                   <td>reason</td>
+               </tr>
+               </table>
+          </center>  
+          </form>   
+
+</body>
+</html>

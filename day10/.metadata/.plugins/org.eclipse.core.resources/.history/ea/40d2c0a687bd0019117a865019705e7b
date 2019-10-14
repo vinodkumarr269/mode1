@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script>
+function redC(){
+	document.bgColor="red";
+}
+function blueC(){
+	document.bgColor="red";
+}
+function greenC(){
+	document.bgColor="red";
+}
+</script>
+<body>
+<center>
+<input type="button" value="red" onclick="redC()" />
+&nbsp;&nbsp;&nbsp;
+<input type="button" value="blue" onclick="blueC()" />
+&nbsp;&nbsp;&nbsp;
+<input type="button" value="green" onclick="greenC()" />
+&nbsp;&nbsp;&nbsp;
+</center>
+
+</body>
+</html>

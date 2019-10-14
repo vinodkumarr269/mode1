@@ -1,0 +1,13 @@
+package com.hcl.exception;
+
+/**
+ * exception class.
+ * @author Coalesce vinod.
+ *
+ */
+
+class NegativeException extends Exception { 
+  public NegativeException(String error) { 
+    super(error);
+  }
+}

@@ -1,0 +1,14 @@
+package com.hcl.ex;
+
+public class First {
+	public void show(){
+		System.out.println("first method");
+	}
+	class Second extends First{
+		public void show(){
+			System.out.println("second method");
+		}
+	}
+	
+
+}

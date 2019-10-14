@@ -1,0 +1,16 @@
+package boxing;
+
+public class ConDemo {
+	
+	public ConDemo() {
+		System.out.println("default");
+	}
+	static{
+		System.out.println("static");
+	}
+
+public static void main(String[] args) {
+	ConDemo x=new ConDemo();
+}
+	
+}

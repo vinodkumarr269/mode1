@@ -1,0 +1,10 @@
+package com.hcl.java;
+
+public class StrFun {
+	public static void main(String[] args) {
+		String str="Welcome to java programming";
+		System.out.println("length"+str.length());
+		System.out.println("char at 5 th posoition"+str.charAt(5));
+	}
+
+}

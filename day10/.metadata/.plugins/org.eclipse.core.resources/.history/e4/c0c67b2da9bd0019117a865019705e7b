@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="frmRadio">
+	Gender:
+	<input type="radio" id="gen" value="Male" name="gender"/> Male
+	<input type="radio"  id="radio" value="Female" name="gender"/> Female
+<input type="button"   value="show">
+</form>
+</body>
+</html>

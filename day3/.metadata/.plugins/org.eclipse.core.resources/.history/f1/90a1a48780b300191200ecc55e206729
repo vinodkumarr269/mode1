@@ -1,0 +1,12 @@
+package com.hcl.Quiz;
+enum P13{
+	A,B,C,D,E;
+	private P13(){
+		System.out.println("hi");
+	}
+
+}
+public class P13 {
+	main
+
+}

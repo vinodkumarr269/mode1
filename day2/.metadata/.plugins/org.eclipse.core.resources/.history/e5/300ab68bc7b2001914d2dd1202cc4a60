@@ -1,0 +1,13 @@
+package Practice;
+
+public class StrTest {
+	public void test(String str){
+		char[] c=str.toCharArray();
+		System.out.println(c[5]);
+	}
+	public static void main(String[] args) {
+		String str="welcome";
+		new StrTest().test(str);
+	}
+
+}

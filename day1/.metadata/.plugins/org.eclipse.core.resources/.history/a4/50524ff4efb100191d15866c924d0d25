@@ -1,0 +1,46 @@
+package com.hcl.obj;
+
+public class SbExample {
+	public StringBuilder show(int age,String name,String course,String city)
+	{
+		StringBuilder sbError=new StringBuilder();
+		boolean isValid=true;
+		//validation of age
+		if(age<=20){
+			sbError.append("age must be grater than 20"+"\r\n");
+			isValid=false;
+		}
+		if(name.indexOf(' ')==-1){
+			sbError.append("name must contain first and last"+"\r\n");
+			isValid=false;
+		}
+		if(!course.equalsIgnoreCase("java")){
+			sbError.append("only java allowed"+"\r\n");
+			isValid=false; 
+		}
+//		if(!city.equals("ban")){
+//			sbError.append("only bangalore allowed"+"\r\n");
+//			isValid=false;
+	//	}
+		if(isValid==true){
+
+			sbError.append("age "+age);
+			sbError.append("name "+name);
+			sbError.append("course "+course);
+			sbError.append("city "+city);
+			
+		}
+		return sbError;
+
+	}
+	public static void main(String[] args) {
+		int age;
+		String name,city,course;
+		age=31;
+		course="JAVA";
+		name="vinod kumar";
+		city="banalore";
+		System.out.println(new SbExample().show(age,name,course,city));
+				
+	}
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form method="get" action="LeaveServlet" >
+          <center>
+               <table border="3">
+               <tr>
+                  <th height="50px",width="100px">leaveId</th>
+                  <th>nnnn</th>
+                  <th colspan="2">NoOfDays</th>
+                  <th>xxxxxxxx</th>
+                  <th colspan="2">StartDate</th>
+                  <th>nn</th>
+               </tr>
+               <tr>
+                  <td height="40px",width="80px">EndDate</td>
+                  <td>Leave Type</td>
+                  <td>Status</td>
+                  <td>Reason</td>
+                  <td>Applied On</td>
+                  <td>Manager Comments</td>
+               </tr>
+               </table>  <br/><br/>
+                
+          </center>  
+          </form>   
+
+</body>
+</html>

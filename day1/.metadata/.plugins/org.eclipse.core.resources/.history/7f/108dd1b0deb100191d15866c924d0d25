@@ -1,0 +1,20 @@
+package com.hcl.java;
+
+public class StrFun {
+	public static void main(String[] args) {
+		String str="Welcome to java programming";
+		System.out.println("length"+str.length());
+		System.out.println("char at 5 th posoition "+str.charAt(5));
+		System.out.println("index of a"+str.indexOf('a'));
+		System.out.println("last occurance of a"+str.lastIndexOf('a'));
+		System.out.println("sub string "+str.substring(3));
+		String s1="Hello",s2="Hello";
+		System.out.println(s1.equals(s2));
+		String s3="Java",s4="Programming";
+		System.out.println(s3.compareTo(s4));
+		String s4="Java",s3="Programming";
+		System.out.println(s3.compareTo(s4));	
+		
+	}
+
+}

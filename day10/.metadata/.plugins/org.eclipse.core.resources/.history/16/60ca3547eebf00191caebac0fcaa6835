@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1px solid black" remove="border"width ="200" colspan="2">
+   <tr>
+    <th>
+     <td>name</td>
+     <td>tel</td>
+     <td>hin</td>
+     <td>eng</td>
+     <td>mat</td>
+     
+    </th>
+   </tr>
+    <tr>
+    <th>
+     <td>vinod</td>
+     <td>100</td>
+     <td>97</td>
+     <td>80</td>
+     <td>100</td>
+     
+    </th>
+   </tr>
+    <tr>
+    <th>
+     <td>vinod</td>
+     <td>100</td>
+     <td>97</td>
+     <td>80</td>
+     <td>100</td>
+     
+    </th>
+   </tr>
+    <tr>
+    <th>
+     <td>vinod</td>
+     <td>100</td>
+     <td>97</td>
+     <td>80</td>
+     <td>100</td>
+     
+    </th>
+   </tr>
+</table>
+
+</body>
+</html>

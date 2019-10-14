@@ -1,0 +1,19 @@
+package com.hcl.file;
+
+import java.io.File;
+
+public class Practice {
+	public static void main(String[] args) {
+		
+	
+	File k1= new File("C:/hcljava/day4/exception/src/com/hcl/exception/Custom.java");
+	System.out.println(k1.getName());
+	System.out.println(k1.getAbsolutePath());
+	File k2=new File("C:/hcljava/day4/exception");
+	String[] f2=k2.list();
+	for (String string : f2) {
+		System.out.println("string");
+	}
+
+}
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="j9.js"></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<form name="nameForm">
+<table border="3">
+<tr>
+
+NameForm 
+
+</tr>
+
+ <tr>
+  <th>FirstName</th>
+  <td><input type="text" name="FirstName" /></td>
+  
+</tr>
+<tr>
+  <th>LastName </th>
+  <td><input type="text" name="LastName" /></td>
+ </tr>
+<tr>
+<th>FullName</th>
+<td><input type="text" name="FullName" onfocus="show()"/></td>
+</tr>
+
+
+
+</table>
+</center>
+</form>
+
+</body>
+</html>

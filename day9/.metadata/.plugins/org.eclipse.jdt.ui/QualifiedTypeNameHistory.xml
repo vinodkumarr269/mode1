@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.hcl.bank.UpdateAccountMain"/>
+<fullyQualifiedTypeName name="inventory.InventoryBAL"/>
+<fullyQualifiedTypeName name="inventory.Inventory"/>
+<fullyQualifiedTypeName name="inventory.InventoryDAO"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.hcl.bank.AccountBAL"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,20 @@
+package boxing;
+
+public class Quiz4 {
+	public void show(int x){
+		switch(x){
+			case 1:
+				System.out.println("hi");
+		case 2:
+			System.out.println("hello");
+			default :
+				System.out.println("default");
+		}
+		
+	}
+	public static void main(String[] args) {
+		Quiz4 o=new Quiz4();
+		o.show(1);
+	}
+
+}

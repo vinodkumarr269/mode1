@@ -1,0 +1,53 @@
+package com.hcl.ems;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class LeaveServlet
+ */
+public class LeaveServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public LeaveServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Leave obj=new Leave();
+		int noOfDays=Integer.parseInt(request.getParameter("noOfDays"));
+		obj.setNoOfDays(noOfDays);
+		obj.setLeaveStartDate(request.getParameter("leaveStartDate"));
+		obj.setLeaveEndDate(request.getParameter("leaveEndDate"));
+		obj.setLeaveStatus(request.getParameter("leaveStatus"));
+		obj.setReason(request.getParameter("reason"));
+		obj.setAppliedOn(request.getParameter("appliedOn"));
+		obj.setManagerComments(request.getParameter("managerComments"));
+		String result=EmployBAL.applyForLeaveBal(obj);
+		PrintWriter out=response.getWriter();
+		out.println(result);
+		
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

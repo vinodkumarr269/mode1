@@ -1,0 +1,7 @@
+package com.hcl.ems;
+
+public enum leaveType {
+	
+	EL
+
+}

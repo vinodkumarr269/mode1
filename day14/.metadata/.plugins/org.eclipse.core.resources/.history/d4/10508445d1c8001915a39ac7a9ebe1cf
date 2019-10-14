@@ -1,0 +1,16 @@
+package com.hcl.ems;
+
+public class Leave {
+	private int leaveId;
+	private String leaveStartDate;
+	private String leaveEndDate;
+	private int noOfDays;
+	private String reason;
+	private String leaveType;
+	private String appliedOn;
+	private String managerComments;
+	private int empId;
+	private String leaveStatus;
+	
+
+}

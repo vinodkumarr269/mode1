@@ -1,0 +1,29 @@
+package com.hcl.exception;
+
+
+public class ThrEx {
+	public void show(int x){
+	boolean	flag=true;
+		if(x<0){
+			flag=false;
+			throw new NumberFormatException("negitive not allowed");
+		}
+		if(x==0){
+			flag=false;
+			throw new ArithmeticException("zero is invalid");
+		}
+	}
+	public static void main(String[] args) {
+		try {
+			int n=0;
+			new ThrEx().show(n);
+		}catch(NumberFormatException e){
+			System.out.println(e.getMessage());
+		}
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

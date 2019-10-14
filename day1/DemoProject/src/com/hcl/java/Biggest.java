@@ -1,0 +1,15 @@
+package com.hcl.java;
+
+public class Biggest {
+	public void cal(int a,int b,int c){
+		System.out.println((a>b)&&(a>c)?a:(b>c)?b:c);
+		
+	}
+
+	public static void main(String[] args) {
+         int a=5,b=6,c=7;
+         Biggest t=new Biggest();
+         t.cal(a,b,c);
+	}
+
+}

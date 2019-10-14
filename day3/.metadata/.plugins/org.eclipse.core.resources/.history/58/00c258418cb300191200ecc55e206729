@@ -1,0 +1,32 @@
+package com.hcl.Quiz;
+public class Roman
+{
+public static void main(String[] args)
+{
+
+String u[] =new String[]{"","I","II","III","IV","V","VI","VII","VIII","IX"};
+String t[] =new String[]{" ","X","XX","XXX","LX","L","LX","LXX","LXXX","XC"};
+int i, a, b, c, d;
+i=19;
+if(i>=100)
+System.out.println("too much for me\n");
+else if(i>=11&&i<=19){
+	int f=(i%100)/10;
+	System.out.println("X"+u[f]);
+}
+else{
+d = i%10;
+c = (i%100)/10;
+b = (i%1000)/100;
+a = i/1000;
+
+if(a>0) System.out.print(u[a]+" thousand " );
+if(b>0) System.out.print(u[b]+" hundred and " );
+if(c>1) System.out.print(t[c]);
+
+if(d>0) System.out.print(u[d]);
+}
+}
+}
+
+

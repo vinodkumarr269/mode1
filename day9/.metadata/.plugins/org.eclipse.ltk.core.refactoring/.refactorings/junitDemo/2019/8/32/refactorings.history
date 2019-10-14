@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;junitpractice&apos; to &apos;com.hcl.junitpractice&apos;&#x0D;&#x0A;- Original project: &apos;junitDemo&apos;&#x0D;&#x0A;- Original element: &apos;junitDemo/src/junitpractice&apos;&#x0D;&#x0A;- Renamed element: &apos;junitDemo/src/com.hcl.junitpractice&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;junitpractice&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;junitpractice" name="com.hcl.junitpractice" qualified="false" references="true" stamp="1565323215537" textual="false" version="1.0"/>
+</session>

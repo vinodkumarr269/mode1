@@ -1,0 +1,8 @@
+package com.hcl.Quiz;
+
+public class Quiz {
+	public static void main(String[] args) {
+		int[] a=new int[]{12,3,4};
+	}
+
+}

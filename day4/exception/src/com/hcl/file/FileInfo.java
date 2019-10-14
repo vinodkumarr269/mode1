@@ -1,0 +1,16 @@
+package com.hcl.file;
+
+import java.io.File;
+
+public class FileInfo {
+  /**
+   * main started.
+   * @param args from vinod,
+   */
+  public static void main(String[] args) {
+    File f1 = 
+        new File("C:/hcljava/day4/exception/src/com/hcl/exception/Custom.java");
+    System.out.println(f1.getName());
+    System.out.println(f1.getAbsolutePath());
+  }
+}

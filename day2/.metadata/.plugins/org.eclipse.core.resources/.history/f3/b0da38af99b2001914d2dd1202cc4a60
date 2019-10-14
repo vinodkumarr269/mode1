@@ -1,0 +1,38 @@
+package boxing;
+
+import java.nio.charset.MalformedInputException;
+
+public class TimeZone {
+	int a,b,c,d;
+
+	public TimeZone() {
+		this.a=3;
+		this.b=30;
+		this.c=2;
+		this.d=35;
+	}
+	public void add(){
+		int e=b+d;
+	int f=a+c;
+	if(e>60){
+		int g=e-60;
+	
+		f++;
+	}
+	else{
+		int g=e;
+	}
+	
+		
+	}
+	@Override
+	public String toString() {
+		return "TimeZone [a=" + a + ", b=" + b + ", c=" + c + ", d=" + d + ", e=" + e + ", f=" + f + ", g=" + g + "]";
+	}
+	public static void main(String[] args) {
+		TimeZone t=new TimeZone();
+		t.add();
+		System.out.println(t);
+	}
+
+}

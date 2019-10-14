@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.hcl.library.ConnectionDAO&apos; to &apos;DaoConnection&apos;&#x0D;&#x0A;- Original project: &apos;LibraryProject&apos;&#x0D;&#x0A;- Original element: &apos;com.hcl.library.ConnectionDAO&apos;&#x0D;&#x0A;- Renamed element: &apos;com.hcl.library.DaoConnection&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ConnectionDAO&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.hcl.library{ConnectionDAO.java[ConnectionDAO" matchStrategy="1" name="DaoConnection" qualified="false" references="true" similarDeclarations="false" stamp="1566217507807" textual="false" version="1.0"/>
+</session>

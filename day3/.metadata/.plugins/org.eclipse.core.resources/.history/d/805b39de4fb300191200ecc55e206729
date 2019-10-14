@@ -1,0 +1,22 @@
+package com.hcl.day3;
+class First{
+	public void show(){
+		System.out.println("first");
+	}
+}
+	class Second extends First{
+		public void show(){
+			super.show();
+			//System.out.println("second");
+		}
+	}
+
+
+public class InhDemo {
+	public static void main(String[] args) {
+	
+	Second o=new Second();
+	o.show();
+
+}
+}

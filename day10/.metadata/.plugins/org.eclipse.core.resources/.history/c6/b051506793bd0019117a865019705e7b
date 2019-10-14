@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script>
+function sum(){
+	var a,b,c;
+	a=parseInt(frmCalc.txtFirstNo.value);
+	b=parseInt(frmCalc.txtSecondNo.value);
+	c=a+b;
+	frmCalc.txtReult=c;
+}
+function sub(){
+	var a,b,c;
+	a=parseInt(frmCalc.txtFirstNo.value);
+	b=parseInt(frmCalc.txtSecondNo.value);
+	c=a-b;
+	frmCalc.txtReult=c;
+}
+function mult(){
+	var a,b,c;
+	a=parseInt(frmCalc.txtFirstNo.value);
+	b=parseInt(frmCalc.txtSecondNo.value);
+	c=a*b;
+	frmCalc.txtReult=c;
+}
+</script>
+<body>
+<form name="frmCalc">
+<center><table border="2">
+<tr>
+<th colspan="2">
+</th>
+</tr>
+<tr>
+  <th>FirstNo</th>
+  <td>
+    <input type="text" name="txtFirstNo"/>
+    </td>
+    </tr>
+  <tr>
+  <th>secondNo</th>
+  <td>
+  <input type="text" name="txtSecondNo"/>
+  </td>
+  </tr>
+   <tr>
+  <th>Result</th>
+  <td>
+  <input type="text" name="txtResult"/>
+  </td>
+  </tr>
+ <tr>
+ <th colspan="2">
+ <input type="button" value="sum" onclick="sum()"/>
+ &nbsp;&nbsp;
+  <input type="button" value="sub"/>
+ &nbsp;&nbsp;
+  <input type="button" value="mult"/>
+ &nbsp;&nbsp;
+ </th>
+ </tr>
+
+  
+</table>
+</center>
+</form>
+
+</body>
+</html>

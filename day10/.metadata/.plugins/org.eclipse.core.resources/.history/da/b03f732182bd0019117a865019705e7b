@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<figcaption> this is sample image</figcaption>
+<figure> 
+<img src="Desert.jpg" height="300" width="300"/>
+<img src="rohit.jpg" height="300" width="300"/>
+<img src="kohli.jpg" height="300" width="300"/>
+</figure>
+
+</body>
+</html>

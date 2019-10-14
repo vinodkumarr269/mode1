@@ -1,0 +1,73 @@
+package com.hcl.ems;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class EmployDao {
+
+	
+	public Employ searchEmployDetails(int empId){
+		Connection con=DaoConnection.getConnection();
+		String cmd="select * from employee where  EMP_ID=?";
+		Employ obj=null;
+		try {
+			PreparedStatement pst=con.prepareStatement(cmd);
+			pst.setInt(1, empId);
+			ResultSet rs=pst.executeQuery();
+			if(rs.next()){
+				obj=new Employ();
+				obj.setEmpId(rs.getInt("EMP_ID"));
+				obj.setEmpName(rs.getString("EMP_NAME"));
+				obj.setEmail(rs.getString("EMP_EMAIL"));
+				obj.setMobileNo(rs.getString("EMP_MOB_NO"));
+				obj.setDeptName(rs.getString("EMP_DPT_NAME"));
+				obj.setDateOfJoin(rs.getString("EMP_DATE_JOINED"));
+				obj.setMgrId(rs.getInt("EMP_MGR_ID"));
+				obj.setLeaveBal(rs.getInt("EMP_LEAVE_BALANCE"));
+		
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return obj;
+	}
+      public String applyForLeave(Leave obj){
+    	  Connection con=DaoConnection.getConnection();
+//    	  LeaveType lt=LeaveType.EL;
+//    	  Employee employ=myDetails(obj.getEmp_Id());
+    	  leaveStatus ls;
+    	  if(Employ.getMgrId()==0) {
+    	   ls=leaveStatus.APPROVED;
+    	  }else{
+    	   ls=leaveStatus.PENDING;
+    	  }
+
+    	  String  cmd="Insert Into LEAVE_HISTORY (LEA_START_DATE,LEA_END_DATE,LEA_NO_OF_DAYS"
+    	  		+ "LEA_REASON,LEA_TYPE,LEA_APPLIED_ON,LEA_MGR_COMMENTS,LEA_STATUS)  values(?,?,?,?,?,?,?,?)";
+    	  String result="";
+    	  try {
+			PreparedStatement pst=con.prepareStatement(cmd);
+			pst.setString(1,obj.getLeaveStartDate());
+			pst.setString(2,obj.getLeaveEndDate());
+			pst.setInt(3,obj.getNoOfDays());
+			pst.setString(4,obj.getReason());
+			leaveType lt=leaveType.valueOf("LEA_TYPE");
+			pst.setString(5,lt.toString());
+			pst.setString(6,obj.getAppliedOn());
+			pst.setString(7,obj.getManagerComments());
+			leaveStatus ls=leaveStatus.valueOf("LEA_STATUS");
+			pst.setString(8,ls.toString());
+			pst.executeUpdate();
+			result="Leave Applied";
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	  return result;
+    	  
+      }
+}

@@ -1,0 +1,20 @@
+package com.hcl.Quiz;
+
+class C1{
+	void test(){
+		System.out.println("welcome");
+	}
+ }
+	class C2 extends C1 {
+		void test(){
+			System.out.println("hello");
+		}
+	}
+	public class Quiz1
+	{
+	public void main(String[] args) {
+		C1 o=new C1();
+		o.test();
+		
+	}
+	}

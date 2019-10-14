@@ -1,0 +1,30 @@
+package boxing;
+
+public class BoxTest {
+	public void show(Object ob){
+		String types=ob.getClass().getSimpleName();
+		if(types.equals("Integer")){
+			int x=(Integer)ob;
+			System.out.println(x);
+		}
+		if(types.equals("Double")){
+			Double x=(Double)ob;
+			System.out.println(x);
+		}
+		if(types.equals("String")){
+		String x=(String)ob;
+			System.out.println(x);
+		}
+		
+		
+	}
+	public static void main(String[] args) {
+		int a="rwrwrw";
+		double b=12;
+		String name="HCL";
+		BoxTest obj=new BoxTest();
+		obj.show(a);
+		obj.show(b);
+		obj.show(name);
+	}
+}

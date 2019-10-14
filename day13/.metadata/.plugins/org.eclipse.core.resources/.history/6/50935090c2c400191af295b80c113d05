@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="3">
+		<tr>
+			<th>DepartmentNo</th>
+			<th>DepartmentName</th>
+			<th>Location</th>
+		
+		</tr>
+		<%
+		&>
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+package p5;
+
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
+public class P2 extends p1.P2{
+	p1.
+	public void display(){
+		System.out.println()
+	}
+
+}

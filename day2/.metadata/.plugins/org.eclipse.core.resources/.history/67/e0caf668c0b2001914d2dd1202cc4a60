@@ -1,0 +1,9 @@
+package p1;
+
+public class P3 extends P2 {
+	P2 p=new P2();
+	public void display(){
+System.out.println(p.m);
+
+}
+}

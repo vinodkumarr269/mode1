@@ -1,0 +1,13 @@
+127.0.0.1 - - [23/Aug/2019:11:48:41 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:11:48:42 +0530] "GET /BankProjec/Bank.html HTTP/1.1" 200 503
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:11:48:43 +0530] "GET /BankProjec/SearchAccount HTTP/1.1" 404 1042
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:11:48:47 +0530] "GET /BankProjec/CreateAccount HTTP/1.1" 200 1361
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:11:48:50 +0530] "GET /BankProjec/UpdateAccount HTTP/1.1" 404 1042
+127.0.0.1 - - [23/Aug/2019:11:49:54 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:11:49:55 +0530] "GET /BankProjec/ HTTP/1.1" 200 367
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:11:50:08 +0530] "GET /BankProjec/DepositeAccountServlet?accountNo=3&depAmount=333 HTTP/1.1" 200 19
+127.0.0.1 - - [23/Aug/2019:11:50:41 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:11:50:44 +0530] "GET /BankProjec/ HTTP/1.1" 200 503
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:11:50:44 +0530] "GET /BankProjec/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:11:50:45 +0530] "GET /BankProjec/SearchAccount HTTP/1.1" 404 1042
+0:0:0:0:0:0:0:1 - - [23/Aug/2019:11:50:48 +0530] "GET /BankProjec/UpdateAccount HTTP/1.1" 404 1042

@@ -1,0 +1,18 @@
+package boxing;
+
+public class Quiz5 {
+	public void show(object ob){
+		if(ob=="ABC"){
+			System.out.println("correct");
+		}
+		else{
+			System.out.println("Error");
+		}
+	}
+	public static void main(String[] args) {
+		String s="ABC";
+		Quiz5 o=new Quiz5();
+		o.show(s);
+	}
+
+}

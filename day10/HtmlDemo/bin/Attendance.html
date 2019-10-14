@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function attdemo(){
+	var res=""
+	if(frmAtt.chkAnisha.checked==true){
+		res+="Anisha is present<br/>";
+	}
+	else{
+		res+="Anisha is absent<br/>";
+	}
+	document.getElementById("res").innerHTML=res;
+}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="frmAtt">
+Anisha;
+<input type="checkbox" name="chkAnisha" onchange="attdemo()"/>
+</br></br>
+Rishab;
+<input type="checkbox" name="chkRishab"/>
+</br></br>
+Uttam;
+<input type="checkbox" name="chkUttam"/>
+</br></br>
+Raghu;
+<input type="checkbox" name="chkRaghu"/>
+</br></br>
+<span id="res"></span>
+</form>
+
+</body>
+</html>
